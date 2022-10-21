@@ -1,1 +1,28 @@
+block footer 
+    footer.footer
+        div.footer_container
+            article.footer_catalogue 
+                h3 КАТАЛОГ
+                ul
+                    for i in catalogue
+                        li 
+                            a(href="#")=i.name
+            
+            article.footer_information                        
+                h3 ИНФОРМАЦИЯ
+                ul
+                    for i in informationBlocks
+                        li 
+                            a(href="#")=i.name 
+            
+            article.footer_working_time                      
+                h3 ВРЕМЯ РАБОТЫ
+                div
+                    img(src="../../assets/images/footer-icons/wall-clock.svg", alt="часы")
+                    p #[span пн-пт] 9:00 – 20:00  #[span сб-вс]  10:00 – 18:00  
+                div
+                    img(src="../../assets/images/footer-icons/placeholder.svg", alt="геолокация")
+                    p г. Санкт - Петербург, ул. Тамбасова, д.7
 
+                include ../../components/socials/socials
+        

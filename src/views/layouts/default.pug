@@ -1,4 +1,13 @@
 block variables
+  - const navLinks = [{name: "Каталог товаров"},{name: "Доставка и оплата"},{name: "Цены"},{name: "Контакты"},]
+  - const socialNetworks = [{name: "vk", src: "assets/images/socials/vk.svg"},{name: "tg",src:"assets/images/socials/telegram.svg"},{name: "inst",src:"assets/images/socials/instagram.svg"},{name: "WA",src:"assets/images/socials/whatsapp.svg"},]
+  - const buttons = [{name: "loop", src: "assets/images/header/loop.svg"},{name: "heart", src: "assets/images/header/heart.svg"},{name: "basket", src: "assets/images/header/basket.svg" },]
+  - const breadcrumbs = [{name: "Главная"},{name: "Монтаж дымоходов"},]
+  - const benefits = [{name: "Доступные цены"},{name: "Собственное производсвто дымоходов"},{name: "Выполнение необходимых работ, связанных с установкой камина, печи, котла"},{name: "Гарантия (от трёх до десяти лет)"},{name: "Работаем чисто, аккуратно, убираем за собой, не сквернословим"},{name: "Только русские квалифицированные специалисты"},{name: "Устанавливаем любые дымоходы всех производителей"},]
+  - const process = [{name: "Рассчёт предварительной заявки"},{name: "Замер объекта нашим инженером"},{name: "Составление Коммерческого предложения по изделиям дымохода и окончательной сметы на  работы "},{name: "Изготовление Дымохода, покраска (если требуется)"},{name: "Монтаж продукции, проверка и наладкапробный запуск системы и последующая эксплуатация"},{name: "Гарантийное обслуживание по соответствующем сроку"},]
+  - const catalogue = [{name: "Дымоходы"},{name: " Дымососы "},{name: "Печи для дома "},{name: "Печи для бани"},{name: " Камины"},{name: "Силикат кальция "},{name: "Котлы"},{name: "Ещё"},]
+  - const informationBlocks = [{name: "Каталог"},{name: "Установка и монтаж"},{name: "Отзывы"},{name: "Ликвидация товара"},{name: "Полезное"},{name: "Контакты"},{name: " Оплата и доставка"},]
+                                            
 
 doctype html
 html(lang="ru")
@@ -7,6 +16,9 @@ html(lang="ru")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title #{title ? title : 'Заголовок страницы'}
+    link(rel="preconnect", href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap", rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet")
     link(href="/assets/styles/main.css" rel="stylesheet")
   body
     main

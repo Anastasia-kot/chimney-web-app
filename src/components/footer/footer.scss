@@ -1,0 +1,67 @@
+.footer {
+    background-color: #0C2F33;
+    color: white;
+    width: 100%;
+
+}
+
+.footer_container {
+    width: 1221px;
+    height: 350px;
+    margin: 0 auto;
+    padding-top: 88px;
+
+    display: flex;
+    justify-content: space-between;
+
+    article {
+        height: 170px;
+        width: 343px;
+
+        //обычный текст
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+        h3 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            /* identical to box height */
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 19px;
+            height: 125px;
+        }
+    
+        div {
+            display: flex;
+            align-items: center;
+            gap:8px;
+            span {
+               color: #4C858B;
+            }
+         }
+        img {
+            width: 17px;
+            height: 17px;
+        }
+    }
+
+    .footer_catalogue {}
+
+    .socialNetworks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 203px;
+    }
+}

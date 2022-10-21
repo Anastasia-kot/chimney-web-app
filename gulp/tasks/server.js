@@ -12,7 +12,7 @@ const { paths } = require('../config');
 
 const server = () => {
   browserSync.init({
-    server: 'dist/',
+    server: 'dist/'
   })
 
   watch(paths.styles.watch, styles);

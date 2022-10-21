@@ -1,6 +1,86 @@
 extends ../layouts/default
 
-block variables
+mixin preferenceCard(img_link, header, content)
+  li.list_item
+    img(src=img_link, alt="картинка преимущества")
+    h3=header
+    p=content
 
 block content
-  h1 Главная страница 2
+  div.main_container
+
+    article.main_header         
+      h1.main_h1 Монтаж дымоходов
+      nav.main_breadcrumb
+        ol.main_breadcrumb_list
+          for i in breadcrumbs
+            li.breadcrumb_item
+              a(href='#', class="breadcrumb_item_link")=i.name
+      p.main_description В 
+        span.main_description_companyName Дымоход.ру  
+        |  вам помогут как приобрести, так и установить дымоход любой конфигурации. В нашем монтажном отделе, состоящим из трёх бригад работают квалифицированные специалисты, которые ежегодно проходят курсы повышения квалификации. Все работы проводим качественно и аккуратно, в короткий срок и на совесть.
+              
+    article.main_generalInfo           
+      div
+        h2(lang="la").main_h2 Lorem ipsum dolor sit amet
+        h2(lang="la").main_h2_sub Lorem ipsum
+        ul.main_benefits
+          for i in benefits
+            li(class="main_benefits_item")=i.name
+      aside.main_aside_images
+        img(src="../../assets/images/Blob-green.svg", alt="пятно", class="main_aside_image_blob")
+        img(src="../../assets/images/truba.png", alt="труба", class="main_aside_image_truba")
+        img(src="../../assets/images/Triangle-2.svg", alt="3 треугольника", class="main_aside_image_triangle")
+        img(src="../../assets/images/Triangle-2.svg", alt="3 треугольника-2", class="main_aside_image_triangle2")
+        img(src="../../assets/images/dots.svg", alt="точки", class="main_aside_image_dots")
+        img(src="../../assets/images/dots.svg", alt="точки2", class="main_aside_image_dots2")
+    
+    article.main_process           
+      h2.main_h2 Процесс выполнения монтажa
+      ol.main_process_list
+        for i in process
+          li(class="main_process_item")=i.name
+
+    article.main_preference           
+      h2.main_h2 Почему Дымоход.ру?
+      p.main_preference_text В отличие от других производителей, мы ручаемся за качество продукции, т.к. все Дымоходы изготавливаются из качественной стали, проверенного теплоизолятора, по современной технологии плазменной сварки «встык» 
+      ul.main_preference_list
+        +preferenceCard('../../assets/images/preferencies/guarantee.svg', 'Большой гарантийный срок','Крепёж, стыковка элементов – 10 лет Сквозная коррозия труб – 5 лет Гидроизоляция – 3 года')
+        +preferenceCard('../../assets/images/preferencies/architect.svg', 'Помощь в покупке агрегата','(печи, камина, котла), а также качественной установке на объекте с последующим гарантийным сервисом')
+        +preferenceCard('../../assets/images/preferencies/review.svg', 'Реальные отзывы клиентов','Убедитесь в добросовестности исполнения, прочитав Отзывы клиентов в специальном разделе.')
+
+    article.main_consulting           
+      h2.main_h2 необходима консультация?
+      p.main_consulting_description  оставьте заявку или свяжитесь с нами в социальных сетях
+      include ../../components/socials/socials
+                
+      form(action="submit").main_consulting_form     
+        h3.main_consulting_form_h3 Для 
+          span.color_orange консультации 
+          | заполните форму!
+        p.main_consulting_form_text С Вами свяжутся в ближайшее время
+        div.input_container
+          input(type="text" placeholder="Ваше имя").input_name 
+          input(type="tel" placeholder="Ваш телефон").input_phone
+          button(type="submit").button_submit отправить
+
+    article.main_video           
+      h2.main_h2 Видео об установке
+      p(lang="la"). 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.   
+      div
+        img(src="../../assets/images/video-cover.jpg", alt="точки", class="main_video_cover")
+        img(src="../../assets/images/dots.svg", alt="точки", class="main_video_dots")
+        img(src="../../assets/images/dots.svg", alt="точки2", class="main_video_dots2")
+        img(src="../../assets/images/Blob.svg", alt="точки2", class="main_video_blob")
+        img(src="../../assets/images/Blob.svg", alt="точки2", class="main_video_blob2")
+    
+    article.main_photo           
+      h2.main_h2 Фото выполненных работ
+      p(lang="la").main_photo_text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+      ul.photo_list
+        for i in [1,2,3,4,5,6,7,8]
+          li 
+            img(src=`../../assets/images/photo-gallery/Rectangle 197-${i}.jpg`, alt=i)
+            
+

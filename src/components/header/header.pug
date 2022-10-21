@@ -1,0 +1,24 @@
+block header
+    header.header
+        div.header_container
+            img(src="../../assets/images/header/Logo.png", alt="logo").header_logo
+            img(src="../../assets/images/header/burger-menu.png", alt="burger").header_burger
+            
+            nav 
+                ul.header_navLinks
+                    for i in navLinks
+                        li.header_navLinks_item
+                            a(href='#')=i.name
+            
+            a(href="tel:+78125092198").header_telephoneNumber +7 (812) #[span 509 21 98] 
+            
+            a(href="#").header_callBack перезвоните мне
+            
+            include ../../components/socials/socials
+
+
+            ul.header_buttons
+                for i in buttons
+                        li 
+                            a(href='#')
+                                img(src=("../../"+i.src), alt=i.name)
