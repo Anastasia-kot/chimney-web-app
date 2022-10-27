@@ -27,7 +27,11 @@
     @media (max-width: 768px) {
         //for 768...320
         width: 203px;
-            }
+        justify-content: space-around;
+        height: 70px;
+        padding: 0px;
+
+    }
 
     article {
         height: 170px;
@@ -71,6 +75,7 @@
             flex-direction: column;
             gap: 19px;
             height: 125px;
+            height: 10px;
 
         }
 
@@ -125,105 +130,108 @@
 
 
         font-size: 13px;
+        height: min-content;
 
-        h3 {
-            margin-bottom: 16px;
+
+  
+    }
+
+    h3 {
+        margin-bottom: 16px;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        height: 26px;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 8px;
+
+        @media (max-width: 1919px) {
+            //for 1919...1440...769
+            display: none;
         }
 
-        div {
-            display: flex;
-            align-items: center;
-            height: 26px;
-            margin: 0;
-            padding: 0;
-            margin-bottom: 8px;
+        @media (max-width: 768px) {
+            //for 768...320
+            display: none;
 
-            @media (max-width: 1919px) {
-                //for 1919...1440...769
-                display: none;
+        }
+
+
+        img {
+            margin-right: 7px;
+        }
+
+        span {
+            color: #4C858B;
+
+            &:nth-child(2) {
+                margin-left: 8px;
             }
+        }
 
-            @media (max-width: 768px) {
-                //for 768...320
-                display: none;
-
-            }
-
+        &:nth-child(3) {
+            width: 320px;
 
             img {
-                margin-right: 7px;
+                margin-left: -1px;
+                margin-top: -2px;
             }
 
-            span {
-                color: #4C858B;
+            p {
+                letter-spacing: -0.3px
+            }
+        }
+    }
 
-                &:nth-child(2) {
-                    margin-left: 8px;
+
+
+    .socialNetworks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 203px;
+        height: 25px;
+        margin-top: 25px;
+        margin-left: 2px;
+        gap: 0px;
+        justify-content: space-between;
+
+        li {
+            &:first-child {
+                img {
+                    width: 23px;
+                    height: auto;
+                }
+
+            }
+
+            &:nth-child(2) {
+                img {
+                    width: 21px;
+                    height: auto;
+                    margin-left: -7px;
+
                 }
             }
 
             &:nth-child(3) {
-                width: 320px;
-
                 img {
-                    margin-left: -1px;
-                    margin-top: -2px;
+                    width: 18px;
+                    height: auto;
+                    margin-left: -2px;
                 }
+            }
 
-                p {
-                    letter-spacing: -0.3px
+            &:last-child {
+                img {
+                    width: 18px;
+                    height: auto;
                 }
             }
         }
-
-
-
-        .socialNetworks {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 203px;
-            height: 25px;
-            margin-top: 25px;
-            margin-left: 2px;
-            gap: 0px;
-            justify-content: space-between;
-
-            li {
-                &:first-child {
-                    img {
-                        width: 23px;
-                        height: auto;
-                    }
-
-                }
-
-                &:nth-child(2) {
-                    img {
-                        width: 21px;
-                        height: auto;
-                        margin-left: -7px;
-
-                    }
-                }
-
-                &:nth-child(3) {
-                    img {
-                        width: 18px;
-                        height: auto;
-                        margin-left: -2px;
-                    }
-                }
-
-                &:last-child {
-                    img {
-                        width: 18px;
-                        height: auto;
-                    }
-                }
-            }
-        }
-
     }
 
 }
